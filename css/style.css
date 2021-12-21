@@ -1,0 +1,599 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url('https://png.pngtree.com/background/20210709/original/pngtree-blue-smart-light-tech-background-picture-image_939986.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    max-width: 995px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.hide {
+    display: none;
+}
+
+.header__title {
+    font-weight: 500;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+    color: #fff;
+}
+
+.header__definition {
+    max-width: 995px;
+    border: 2px solid #3737ff;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #eeeeff;
+    box-shadow: 0px 0px 5px 5px #e2e2e2;
+    margin-top: 30px;
+
+}
+
+.header__definition > p {
+    margin-bottom: 10px;
+}
+
+.header__definition > p:last-child {
+    margin-bottom: 0;
+}
+
+.sect {
+    padding-bottom: 15px;
+}
+
+.sect-tabs {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sect-tabs__link {
+    user-select: none;
+    font-size: 17px;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 2px solid transparent;
+    border-bottom: 2px solid #ffffff;    
+}
+
+.sect-tabs__link--active {
+    border-color: #ffffff;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+    box-shadow: 0 0 10px #fff;
+}
+
+.calculator, .instruction, .theory {
+    padding: 15px;
+    margin-top: 15px;
+    background-color: #dfd7d7;
+    box-shadow: 0px 0px 5px 5px #e2e2e2;
+    border-radius: 6px;
+    border: 2px solid #0909ff;
+}
+
+.calculator__content {
+    display: flex;
+    justify-content: center;
+}
+
+.sect-content__inputs {
+    max-width: 420px;
+    min-height: 55px;
+    padding: 25px 35px;
+    background-color: #c0c0c0;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+.inputs__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    flex-wrap: wrap;
+}
+
+.enter__value {
+    position: relative;
+    margin-right: 10px;
+    display: flex;
+}
+
+.enter__value:nth-child(3) {
+    margin-right: 0;    
+    margin-bottom: 0;
+}
+
+.enter__value > p {
+    margin-left: 3px;
+    font-weight: 500;
+}
+
+label {
+    position: absolute;
+    top: 4px;
+    left: 12px;
+    color: #777;
+    user-select: none;
+    cursor: text;
+    transition: 0.2s linear;
+}
+
+label.active {
+    font-size: 14px;
+	top: -19px;
+	left: 0;
+	color: #000;	
+}
+
+.input, .input2, .input3{
+    display: block;
+    width: 90px;
+    height: 22px;
+    font-size: 18px;
+    padding: 2px 5px;
+    border-radius: 6px;
+    border: 1px solid #000;
+}
+
+.input:focus, .input2:focus, .input3:focus {
+    box-shadow: 0 0 3px #000;
+}
+
+.sect-content__btn {
+    cursor: pointer;
+    font-weight: 500;
+    width: 100%;
+    background-color: #dfdfdf;
+    color: #000000;
+    font-size: 22px;
+    margin-top: 10px;
+    border-radius: 6px;
+    outline: none;
+    border: 2px solid #5e5e5e;
+    padding: 1px 0;
+}
+
+.sect-content__btn:active {
+    box-shadow: inset 0 0 3px #000;
+}
+
+.sect-output {
+    width: 445px;
+    height: 222px;
+    overflow-y: scroll;
+    font-size: 17px;
+    border-radius: 6px;
+    background-color: #fff;
+    padding: 10px 15px;
+}
+
+.sect-output::-webkit-scrollbar {
+    width: 7px;
+	border-radius: 10px;
+}
+.sect-output::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #0f0f98;
+}
+
+.sect-content__decision {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+.sect-output__title {
+    color: red;
+    font-style: italic;
+    font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+    font-weight: bold;
+}
+
+.sect-output__span {
+    display: flex;
+}
+.sect-output__span--1 {
+    margin-bottom: 10px;
+}
+
+
+.sect-output__equation {
+    display: block;
+    font-style: italic;
+    margin: 10px 0;
+}
+
+.sect-output__discriminant {
+    margin-bottom: 10px;
+}
+
+.value-x1 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.x1-1 {
+    position: relative;
+    max-width: 150px;
+}
+
+.x1-1-top {
+    font-size: 14px;
+    border-bottom: 1px solid #000;
+    max-width: 80px;
+    margin-left: 30px;
+    position: relative;
+    top: 10px;
+}
+.x1-1-down {
+    font-size: 14px;
+    margin-left: 30px;
+    text-align: center;
+    position: relative;
+    top: -13px;
+}
+/*  */
+.value-x2c {
+    display: flex;
+}
+
+.out-x2c {
+    position: relative;
+    max-width: 150px;
+}
+
+.out-x2c_top {
+    font-size: 14px;
+    border-bottom: 1px solid #000;
+    max-width: 80px;
+    margin-left: 30px;
+    position: relative;
+    top: 10px;
+    text-align: center;
+}
+.out-x2c__down {
+    font-size: 14px;
+    margin-left: 30px;
+    text-align: center;
+    position: relative;
+    top: -10px;
+}
+/*  */
+.x1-2 {
+    margin-left: 10px;
+}
+
+.x1-2-top {
+    font-size: 14px;
+    border-bottom: 1px solid #000;
+    max-width: 80px;
+    margin-left: 20px;
+    position: relative;
+    top: 10px;
+}
+.x1-2-down {
+    font-size: 14px;
+    margin-left: 20px;
+    text-align: center;
+    position: relative;
+    top: -7px;
+}
+
+.x1-3 {
+    position: relative;
+    top: 17px;
+    margin-left: 10px;
+}
+
+.value-x2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.x2-1 {
+    position: relative;
+    max-width: 150px;
+}
+
+.x2-1-top {
+    font-size: 14px;
+    border-bottom: 1px solid #000;
+    max-width: 80px;
+    margin-left: 30px;
+    position: relative;
+    top: 10px;
+}
+.x2-1-down {
+    font-size: 14px;
+    margin-left: 30px;
+    text-align: center;
+    position: relative;
+    top: -13px;
+}
+
+
+.x2-2 {
+    margin-left: 10px;
+}
+
+.x2-2-top {
+    font-size: 14px;
+    border-bottom: 1px solid #000;
+    max-width: 80px;
+    margin-left: 20px;
+    position: relative;
+    top: 10px;
+}
+.x2-2-down {
+    font-size: 14px;
+    margin-left: 20px;
+    text-align: center;
+    position: relative;
+    top: -7px;
+}
+
+.x2-3 {
+    position: relative;
+    top: 17px;
+    margin-left: 10px;
+}
+
+.value-x3 {
+    display: flex;
+}
+
+.x3-1 {
+    position: relative;
+    max-width: 150px;
+}
+
+.x3-1-top {
+    font-size: 14px;
+    border-bottom: 1px solid #000;
+    max-width: 80px;
+    margin-left: 30px;
+    position: relative;
+    top: 10px;
+}
+.x3-1-down {
+    font-size: 14px;
+    margin-left: 30px;
+    text-align: center;
+    position: relative;
+    top: -13px;
+}
+
+
+.x3-2 {
+    margin-left: 10px;
+}
+
+.x3-2-top {
+    font-size: 14px;
+    border-bottom: 1px solid #000;
+    max-width: 80px;
+    margin-left: 20px;
+    position: relative;
+    top: 10px;
+}
+.x3-2-down {
+    font-size: 14px;
+    margin-left: 20px;
+    text-align: center;
+    position: relative;
+    top: -7px;
+}
+
+.x3-3 {
+    position: relative;
+    top: 17px;
+    margin-left: 10px;
+}
+
+.reply-equations {
+    margin-top: 10px;
+}
+
+.instruction {
+    overflow: auto;
+}
+
+.instruction__title {
+    text-align: center;
+    color: #0000FF;
+    font-style: italic;
+    font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+    font-size: 24px;
+}
+.instruction > p > i {
+    background-color: #fff;
+    padding: 0 5px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.instruction > ul {
+    font-size: 18px;
+    margin-top: 10px;
+    padding-left: 70px;
+}
+
+.sample {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 430px;
+    min-height: 25px;
+    padding: 25px 35px;
+    background-color: #c0c0c0;
+    box-shadow: 0px 0px 5px 7px #9E9E9E;
+    border-radius: 10px;
+    margin: 15px auto;
+}
+
+.sample > i {
+    font-size: 19px;
+    margin-right: 15px;
+    margin-left: 3px;
+}
+.sample > i:last-child {
+    margin-right: 0;
+}
+
+.theory {
+    max-height: 425px;
+    overflow: auto;
+}
+.theory::-webkit-scrollbar {
+    width: 7px;
+	border-radius: 10px;
+}
+.theory::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+}
+
+.theory > .instruction__title {
+    margin-bottom: 15px;
+}
+
+.style {
+    display: inline;
+    font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+    background-color: #fff;
+    padding: 0 8px;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 10px;
+    color: #0000ff;
+}
+
+.folrmula {
+    font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.theory__definition {
+    background-color: #eeeeff;
+    border: 2px solid #3333ff;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 8px 0;
+}
+.theory__definition:last-child {
+    margin-bottom: 0;
+}
+
+.theory__definition > p {
+    margin-top: 10px;
+}
+.theory__definition > ul {
+    padding-left: 40px;
+}
+
+.theory__definition:last-child {
+    padding-bottom: 10px;
+}
+
+@media (max-width: 540px) {
+    .enter__value:nth-child(3) {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 430px) {
+    .sect-output__discriminant {
+        font-size: 16px;
+    }
+
+    .sample-input:nth-child(5) {
+        margin-top: 10px;
+    }
+
+    .sample > i:nth-child(4), .sample > i:nth-child(6) {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 390px) {
+    .enter__value:nth-child(1) {
+        margin-left: 21px;
+    }
+    .enter__value:nth-child(2) {
+        margin-left: 15px;
+        margin-top: 20px;
+    }
+
+    .sect-output__discriminant {
+        font-size: 14px;
+    }
+
+    .sample-input:nth-child(1) {
+        margin-left: 22px;
+    }
+
+    .sample-input:nth-child(3) {
+        margin-top: 10px;
+        margin-left: 15px;
+    }
+
+    .sample-input:nth-child(5) {
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    .sample > i {
+        margin-top: 0;
+        margin-right: 0;
+    }
+    
+}
+
+@media (max-width: 360px) {
+
+    .sect-tabs__link {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 330px) {
+    .x1-3, .x2-3 {
+        top: 0;
+    }
+
+    .sect-tabs__link {
+        font-size: 14px;
+    }
+
+    .sample > i {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 285px) {
+    .sect-tabs__item:nth-child(2) {
+        margin-top: 5px;
+    }
+
+    .x1-3, .x2-3 {
+        top: 17px;
+    }
+}

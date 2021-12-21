@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Квадратные уравнения</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Nuvola_apps_edu_mathematics_blue-p.svg/150px-Nuvola_apps_edu_mathematics_blue-p.svg.png" type="image/png">
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="container">
+
+            <header class="header">
+                <p class="header__title">Онлайн калькулятор. Решение квадратных уравнений.</p>
+                <div class="header__definition">
+                    <p>Используя этот <b>онлайн калькулятор для решения квадратных уравнений</b>, вы сможете очень просто и быстро найти корни квадратного уравнения.</p>
+                    <p>Воспользовавшись онлайн калькулятором для решения квадратных уравнений, вы получите детальное решение вашего примера, которое позволит понять алгоритм решения задач и закрепить пройденный на уроках материал.</p>
+                    <p><i>(Перед тем как начать пользоваться калькулятором, автор рекомендует прочитать инструкцию по попользованию калькулятора)</i></p>
+                </div>
+            </header>
+
+            <section class="sect">
+                <div class="sect-top">
+                    <div class="sect-tabs" id="tabs">
+                        <div class="sect-tabs__item">
+                            <div class="sect-tabs__link sect-tabs__link--active" data-tab="calc">
+                                Калькулятор
+                            </div>
+                        </div>
+                        <div class="sect-tabs__item">
+                            <div class="sect-tabs__link sect-tabs__link" data-tab="information">
+                                Информация
+                            </div>
+                        </div>
+                        <div class="sect-tabs__item">
+                            <div class="sect-tabs__link sect-tabs__link" data-tab="teoria">
+                                Теория
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sect-comtent">
+                        <div class="calculator">
+                            <div class="calculator__content">
+                                <div class="sect-content__inputs">
+                                    <div class="inputs__content">
+                                        <div class="enter__value">
+                                            <label for="value-a">Введите A</label>
+                                            <input type="text" name="value-a" class="input input1" id="value-a" tabindex="1">
+                                            <p>X<sup>2</sup> +</p>
+                                        </div>
+                                        <div class="enter__value">
+                                            <label for="value-b">Введите B</label>
+                                            <input type="text" name="value-b" class="input input2" id="value-b" tabindex="2">
+                                            <p>X<sup></sup> +</p>
+                                        </div>
+                                        <div class="enter__value">
+                                            <label for="value-c">Введите C</label>
+                                            <input type="text" name="value-c" class="input input3" id="value-c" tabindex="3">
+                                            <p>=0<sup></sup></p>
+                                        </div>
+                                    </div>
+                                    <button class="sect-content__btn">Рассчитать</button>
+                                </div>
+                            </div>    
+                            <div class="sect-content__decision">
+                                <div class="sect-output">
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="instruction hide">
+                            <div class="instruction__title">Ввод данных в калькулятор квадратных уравнений</div>
+                            <p>Если в квадратном уравнении есть знаки вычитания, то перед соответствующими коэффициентами в онлайн калькуляторе нужно поставить знак минус ("-"). Например, квадратное уравнение <i>x<sup>2</sup> - x - 5 = 0</i>, вводится в калькулятор следующим образом:</p>
+                            <div class="sample">
+                                <input type="text" class="input sample-input" value="1" readonly><i>x<sup>2</sup> +</i>
+                                <input type="text" class="input sample-input" value="-1" readonly><i>x +</i>
+                                <input type="text" class="input sample-input" value="-5" readonly><i>=0</i>
+                            </div>
+                            <p>
+                                Если в квадратном уравнение меньше трех слагаемых, то рядом с отсутствующим слагаемым в онлайн калькуляторе необходимо ввести коэффициент ноль ("0").<br>
+                                Например, квадратное уравнение: <i>x<sup>2</sup> - 4x = 0</i>, вводится в калькулятор следующим образом:
+                            </p>
+                            <div class="sample">
+                                <input type="text" class="input sample-input" value="1" readonly><i>x<sup>2</sup> +</i>
+                                <input type="text" class="input sample-input" value="-4" readonly><i>x +</i>
+                                <input type="text" class="input sample-input" value="0" readonly><i>=0</i>
+                            </div>
+                            
+                            <div class="instruction__title">Дополнительные возможности калькулятора квадратных уравнений</div>
+                            <ul>
+                                <li>Используйте кнопку <button>Tab</button>на клавиатуре, для перемещения между полями калькулятора.</li>
+                            </ul>
+                        </div>
+
+                        <div class="theory hide">
+                            <div class="instruction__title">Теория. Решение квадратных уравнений при <span class="folrmula">c ≠ 0</span></div>
+                            <div class="theory__definition">
+                                <div class="style">Квадратное уравнение</div> — это уравнение вида 
+                                <span class="folrmula">ax<sup>2</sup> + bx + c = 0,</span>
+                                где <b>a</b> не равно 0
+                            </div>
+                            <div class="theory__definition">
+                                <b>Решить квадратное уравнение</b> означает найти все значения <i style="font-family: 'Times New Roman', Times, serif;">X<sub>i</sub></i>, при которых будет выполняться равенство
+                                <span class="folrmula">ax<sup>2</sup> + bx + c = 0.</span>
+                            </div>
+                            <div class="theory__definition">
+                                <div class="style">Методика решения квадратных уравнений при <i>c ≠ 0</i></div>
+                                <p>Для <b>решения квадратного уравнения</b> необходимо посчитать дискриминант многочлена</p>
+                                <span class="folrmula"> D= b<sup>2</sup> - 4ac.</span>
+                                <ul>
+                                    <li>Если D > 0, то уравнение имеет два различных вещественных корня.</li>
+                                    <li>Если D = 0, то уравнение имеет один корень.</li>
+                                    <li>Если D < 0, то уравнение не имеет вещественных корней.</li>
+                                </ul>
+                            </div>
+                            <div class="instruction__title">Теория. Решение квадратных уравнений при <span class="folrmula">c = 0</span></div>
+                            <div class="theory__definition">
+                                <div class="style">Квадратное уравнение</div> — это уравнение вида 
+                                <span class="folrmula">ax<sup>2</sup> + bx = 0,</span>
+                                где <b>a</b> не равно 0
+                            </div>
+                            <div class="theory__definition">
+                                <b>Решить квадратное уравнение</b> означает найти все значения <i style="font-family: 'Times New Roman', Times, serif;">X<sub>i</sub></i>, при которых будет выполняться равенство
+                                <span class="folrmula">ax<sup>2</sup> + bx = 0.</span>
+                            </div>
+                            <div class="theory__definition">
+                                <div class="style">Методика решения квадратных уравнений при <i>c = 0</i></div>
+                                <p>Для <b>решения квадратного уравнения без с</b> необходимо вынести х за скобки</p>
+                                <span class="folrmula">x(ax+b)=0</span>
+                                <ul>
+                                    <li>1. Приравниваем первый x к нолу: x = 0, это и будет первый корень уравнения</li>
+                                    <li>2. Приравниваем выражение из скобки к нулю и решаем его: x = b/a, это будет второй корень</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    
+
+    <!-- <script src="js/testout.js"></script> -->
+    <script src="js/script.js"></script>
+</body>
+</html>
